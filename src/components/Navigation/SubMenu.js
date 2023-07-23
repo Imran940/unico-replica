@@ -1,7 +1,7 @@
 import { RightOutlined } from "@ant-design/icons";
 import React from "react";
 
-function DropdownMenu({ data = [], hideDropDown }) {
+function SubMenu({ data = [], hideDropDown }) {
   return (
     <div
       className="dropdown-container"
@@ -23,4 +23,4 @@ function DropdownMenu({ data = [], hideDropDown }) {
   );
 }
 
-export default DropdownMenu;
+export default SubMenu;

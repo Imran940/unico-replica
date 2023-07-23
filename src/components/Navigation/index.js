@@ -1,12 +1,31 @@
 import React, { useState } from "react";
 import NavigationWrapper from "./style";
 import MenuOutlined from "@ant-design/icons/MenuOutlined";
-import DropdownMenu from "./DropdownMenu";
-import { developersList, servicesList } from "../../utility/constants";
+import SubMenu from "./SubMenu";
+import { navigationList } from "../../utility/constants";
+import NavigationList from "./NavigationList";
+import { CloseOutlined } from "@ant-design/icons";
 
 function Navigation() {
   const [showServicesDropDown, setShowServicesDropDown] = useState(false);
   const [showDevelopersDropDown, setShowDevelopersDropDown] = useState(false);
+  const [showMenuForMobile, setShowMenuForMobile] = useState(false);
+  const toggleSubMenuOnHover = (listItemName) => {
+    if (listItemName.toLowerCase() == "services") {
+      showDevelopersDropDown && setShowDevelopersDropDown(false);
+      setShowServicesDropDown(true);
+    }
+    if (listItemName.toLowerCase() == "hire developers") {
+      showServicesDropDown && setShowServicesDropDown(false);
+      setShowDevelopersDropDown(true);
+    }
+  };
+
+  const hideSubMenu = (subMenuName) =>
+    subMenuName == "Services"
+      ? setShowServicesDropDown(false)
+      : setShowDevelopersDropDown(false);
+
   return (
     <NavigationWrapper showDevelopersDropDown={showDevelopersDropDown}>
       <div className="navigation-container">
@@ -15,45 +34,35 @@ function Navigation() {
         </div>
         <div className="navigation-right-part">
           <div className="navigation-list-container">
-            <ul className="navigation-list">
-              <li
-                onMouseEnter={() => {
-                  showDevelopersDropDown && setShowDevelopersDropDown(false);
-                  setShowServicesDropDown(true);
-                }}
-              >
-                Services
-                {!!showServicesDropDown && (
-                  <DropdownMenu
-                    data={servicesList}
-                    hideDropDown={setShowServicesDropDown}
-                  />
-                )}
-              </li>
-              <li
-                onMouseEnter={() => {
-                  showServicesDropDown && setShowServicesDropDown(false);
-                  setShowDevelopersDropDown(true);
-                }}
-              >
-                Hire Developers
-                {!!showDevelopersDropDown && (
-                  <DropdownMenu
-                    data={developersList}
-                    hideDropDown={setShowDevelopersDropDown}
-                  />
-                )}
-              </li>
-              <li>Case Study</li>
-              <li>Pricing Plan</li>
-              <li>No Code Tools</li>
-              <li>About Us</li>
-            </ul>
-            <button>Get in Touch</button>
+            <NavigationList
+              showServicesDropDown={showServicesDropDown}
+              showDevelopersDropDown={showDevelopersDropDown}
+              hideSubMenu={hideSubMenu}
+              toggleSubMenuOnHover={toggleSubMenuOnHover}
+            />
           </div>
-
-          <MenuOutlined className="menu-logo" />
+          <div
+            className=""
+            onClick={() => setShowMenuForMobile((prevValue) => !prevValue)}
+          >
+            {showMenuForMobile ? (
+              <CloseOutlined className="close-logo" />
+            ) : (
+              <MenuOutlined className="menu-logo" />
+            )}
+          </div>
         </div>
+        {!!showMenuForMobile && (
+          <div className="mobile-menu-container">
+            <NavigationList
+              showServicesDropDown={showServicesDropDown}
+              showDevelopersDropDown={showDevelopersDropDown}
+              hideSubMenu={hideSubMenu}
+              toggleSubMenuOnHover={toggleSubMenuOnHover}
+              usedBy="mobile"
+            />
+          </div>
+        )}
       </div>
     </NavigationWrapper>
   );

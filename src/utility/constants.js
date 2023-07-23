@@ -25,3 +25,12 @@ export const developersList = [
   "Web Developer",
   "LongChain Developer",
 ];
+
+export const navigationList = [
+  { name: "Services", showSubMenu: true, data: servicesList },
+  { name: "Hire Developers", showSubMenu: true, data: developersList },
+  { name: "Case Study" },
+  { name: "Pricing Plan" },
+  { name: "No Code Tools" },
+  { name: "About Us" },
+];
