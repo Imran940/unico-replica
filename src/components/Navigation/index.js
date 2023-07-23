@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import NavigationWrapper from "./style";
+import NavigationWrapper from "./styles";
 import MenuOutlined from "@ant-design/icons/MenuOutlined";
-import SubMenu from "./SubMenu";
-import { navigationList } from "../../utility/constants";
 import NavigationList from "./NavigationList";
 import { CloseOutlined } from "@ant-design/icons";
 

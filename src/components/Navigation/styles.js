@@ -1,11 +1,15 @@
 import { styled } from "styled-components";
 
 const NavigationWrapper = styled.div`
-  margin: 0 auto;
-  max-width: 1150px;
+  position: sticky;
+  top: 0;
+  width: 100%;
   height: 80px;
+  background: #fff;
+
   .navigation-container {
-    width: 100%;
+    margin: 0 auto;
+    max-width: 1150px;
     height: 100%;
     display: flex;
     align-items: center;
@@ -196,7 +200,6 @@ const NavigationWrapper = styled.div`
   }
 
   @media screen and (max-width: 1100px) {
-    max-width: 80%;
     .navigation-container {
       justify-content: space-between;
       .navigation-right-part {

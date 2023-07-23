@@ -1,5 +1,5 @@
 import React from "react";
-import HomeWrapper from "./Home.style";
+import HomeWrapper from "./styles";
 
 function Home() {
   return (

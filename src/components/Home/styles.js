@@ -49,6 +49,14 @@ const HomeWrapper = styled.div`
         background: #fff;
         text-transform: uppercase;
         font-weight: 500;
+        outline: none;
+        border: none;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background: #3898ec;
+        color: #fff;
       }
     }
     .home-bottom-side {
@@ -130,7 +138,7 @@ const HomeWrapper = styled.div`
     }
   }
 
-  @media screen and (min-width: 771px) and (max-width: 1100px) {
+  @media screen and (min-width: 771px) and (max-width: 1300px) {
     .home-top-side {
       .heading-text {
         max-width: 80% !important;
@@ -142,7 +150,7 @@ const HomeWrapper = styled.div`
       }
 
       button {
-        width: 22% !important;
+        width: 15% !important;
         height: 50px !important;
       }
     }
