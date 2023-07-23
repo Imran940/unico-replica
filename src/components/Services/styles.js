@@ -13,7 +13,9 @@ const ServicesWrapper = styled.div`
       flex-direction: column;
       gap: 15px;
       .service-title {
-        font-size: 20px;
+        font-size: 18px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
       }
       .service-sub-title {
         font-size: 30px;
@@ -54,19 +56,7 @@ const ServicesWrapper = styled.div`
         }
 
         button {
-          width: 150px;
-          height: 50px;
-          background: #000;
-          color: white;
-          font-size: 14px;
-          font-weight: 500;
-          cursor: pointer;
-          border: none;
-          outline: none;
           text-transform: uppercase;
-        }
-        button:hover {
-          background: #3898ec;
         }
 
         transition: all 0.5s ease;
@@ -100,16 +90,10 @@ const ServicesWrapper = styled.div`
         font-size: 17px;
         line-height: 22px;
       }
+
       button {
-        width: 150px;
-        height: 50px;
         background: #fff;
         color: #000;
-        font-size: 14px;
-        font-weight: 500;
-        cursor: pointer;
-        border: none;
-        outline: none;
         text-transform: uppercase;
       }
       button:hover {

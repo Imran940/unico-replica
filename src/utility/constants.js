@@ -65,3 +65,72 @@ export const servicesData = [
     bgColor: "#fbcdcd",
   },
 ];
+
+export const testimonialsData = [
+  {
+    leftSideData: {
+      img: "/images/highlands-brain.webp",
+      title: "HIGHLANDS BRAIN!",
+      description: "Creating A Seamless Educational Experience!",
+      link: "View Case Study",
+    },
+    mainImg: "/images/man-1.webp",
+    rightSideData: {
+      description:
+        "I felt like I was not treated as a client but really as a partner and I like that very much.",
+      name: "Bobby Valentine",
+      workAt: "Product Manager at HCCTS",
+    },
+    bgColor: "#e6effa",
+    color: "#03529f",
+  },
+  {
+    leftSideData: {
+      img: "/images/g-logo.svg",
+      title: "SERGO CLEANING APP",
+      description: "A Property Cleaning Service App",
+    },
+    mainImg: "/images/man-2.webp",
+    rightSideData: {
+      description:
+        "They are great at communication and response time. We have really enjoyed working with them.",
+      name: "Allan Baillie",
+      workAt: "Director of Sergo",
+    },
+    bgColor: "#f0ffee",
+    color: "#2a7221",
+  },
+  {
+    leftSideData: {
+      img: "/images/dog.webp",
+      title: "BARKO MOBILE APP",
+      description: "A Pet Care App",
+      link: "View Case Study",
+    },
+    mainImg: "/images/man-3.jpg",
+    rightSideData: {
+      description:
+        "They were able to come up with a solution that I couldn’t solve and suggested how to improve things as we went along!",
+      name: "Paul Gill",
+      workAt: "Founder of Barko",
+    },
+    bgColor: "rgba(255,248,170,.3)",
+    color: "#613f00",
+  },
+  {
+    leftSideData: {
+      img: "/images/ht.webp",
+      title: "HEIRLOOM TALES",
+      description: "India’s First-Of-Its-Kind Family App",
+    },
+    mainImg: "/images/woman-1.webp",
+    rightSideData: {
+      description:
+        "They explained things that I would need. They have a good team of developers, who know their work.",
+      name: "Riddhi Mehta",
+      workAt: "Founder of Heirloom Tales",
+    },
+    bgColor: "#e6effa",
+    color: "#03529f",
+  },
+];

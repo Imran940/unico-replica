@@ -44,16 +44,10 @@ const HomeWrapper = styled.div`
       }
 
       button {
-        width: 10%;
-        height: 50px;
         background: #fff;
+        color: #000;
         text-transform: uppercase;
-        font-weight: 500;
-        outline: none;
-        border: none;
-        cursor: pointer;
       }
-
       button:hover {
         background: #3898ec;
         color: #fff;

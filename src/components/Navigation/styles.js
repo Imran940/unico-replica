@@ -78,21 +78,6 @@ const NavigationWrapper = styled.div`
             color: gray;
           }
         }
-
-        button {
-          width: 150px;
-          height: 45px;
-          background: #000;
-          color: white;
-          font-size: 14px;
-          font-weight: 500;
-          cursor: pointer;
-          border: none;
-          outline: none;
-        }
-        button:hover {
-          background: #3898ec;
-        }
       }
 
       .menu-logo,
@@ -106,10 +91,14 @@ const NavigationWrapper = styled.div`
     .mobile-menu-container {
       position: absolute;
       top: 80px;
+      z-index: 10;
       width: 80%;
       min-height: 400px;
       background: #fff;
       display: none;
+      left: 10%;
+      animation-name: mobile-slider;
+      animation-duration: 1s;
 
       .navigation-list {
         width: 100%;
@@ -182,25 +171,23 @@ const NavigationWrapper = styled.div`
       }
 
       button {
-        width: 150px;
-        height: 45px;
-        background: #000;
-        color: white;
-        font-size: 14px;
-        font-weight: 500;
-        cursor: pointer;
-        border: none;
-        outline: none;
         margin-left: 70px;
       }
-      button:hover {
-        background: #3898ec;
-      }
+    }
+  }
+
+  @keyframes mobile-slider {
+    from {
+      top: -20px;
+    }
+    to {
+      top: 80px;
     }
   }
 
   @media screen and (max-width: 1100px) {
     .navigation-container {
+      max-width: 90%;
       justify-content: space-between;
       .navigation-right-part {
         width: fit-content !important;
